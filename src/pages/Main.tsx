@@ -25,8 +25,7 @@ const Main = ({ notes, availableTags }: Props) => {
 
   const filtredNotes = notes.filter(
     (note) =>
-      note.title.toLowerCase().includes(title.toLowerCase()) 
-      &&
+      note.title.toLowerCase().includes(title.toLowerCase()) &&
       selectedTags.every((s_tag) =>
         note.tags.some((note_tag) => note_tag.value === s_tag.value)
       )
@@ -36,10 +35,10 @@ const Main = ({ notes, availableTags }: Props) => {
     <div className="container mx-auto py-5">
       {/* Üst Kısım */}
       <Stack direction="horizontal" className="justify-content-between mb-4">
-        <h1 className="d-flex gap-3 align-items-center">
+        <div className="d-flex gap-3 align-items-center">
           <img src="/note_logo.png" width={45} />
-          <span>Notlar</span>
-        </h1>
+          <h1>Notlar</h1>
+        </div>
 
         <Link to="/new">
           <Button>Oluştur</Button>
