@@ -55,9 +55,10 @@ const Main = ({ notes, availableTags }: Props) => {
             </Form.Group>
           </Col>
           <Col>
-            <Form.Group controlId="select">
-              <Form.Label>Etikete Göre Ara</Form.Label>
+            <Form.Group>
+              <Form.Label htmlFor="select">Etikete Göre Ara</Form.Label>
               <ReactSelect
+                id="select"
                 onChange={(all_tags) => setSelectedTags(all_tags as Tag[])}
                 isMulti
                 options={availableTags}
